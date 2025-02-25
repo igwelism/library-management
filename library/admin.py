@@ -25,7 +25,7 @@ class LoanAdmin(admin.ModelAdmin):
     date_hierarchy = "created_at"
     autocomplete_fields = ("borrower", "book")
     ordering = ("book__title", "created_at")
-    readonly_fields = ("created_at", "updated_at")
+    readonly_fields = ("status", "fine", "return_date", "created_at", "updated_at")
 
 
 admin.site.register(Book, BookAdmin)
