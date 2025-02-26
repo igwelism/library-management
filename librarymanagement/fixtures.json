@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "model": "library.book",
+    "pk": 4,
+    "fields": {
+      "created_at": "2018-05-02T23:43:07.605Z",
+      "updated_at": "2018-05-02T23:43:07.606Z",
+      "title": "See Monster",
+      "author": "Brian Adams",
+      "isbn": "1234-5678-910",
+      "page_count": "10",
+      "is_available": true,
+      "stock": 7,
+      "category": "education"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 5,
+    "fields": {
+      "created_at": "2018-05-02T23:43:07.605Z",
+      "updated_at": "2018-05-02T23:43:07.606Z",
+      "title": "Basic Understand of Business",
+      "author": "Steve Jobs",
+      "isbn": "1234-5678-911",
+      "page_count": "9",
+      "is_available": true,
+      "stock": 8,
+      "category": "entertainment"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 6,
+    "fields": {
+      "created_at": "2018-05-02T23:43:07.605Z",
+      "updated_at": "2018-05-02T23:43:07.606Z",
+      "title": "Roman Empire",
+      "isbn": "1234-5678-912",
+      "author": "Karen Spencer",
+      "page_count": "8",
+      "is_available": true,
+      "stock": 7,
+      "category": "comics"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 7,
+    "fields": {
+      "created_at": "2018-05-02T23:43:07.605Z",
+      "updated_at": "2018-05-02T23:43:07.606Z",
+      "title": "Learn Python",
+      "author": "Michael Jackson",
+      "isbn": "1234-5678-913",
+      "page_count": "7",
+      "is_available": true,
+      "stock": 6,
+      "category": "biography"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 8,
+    "fields": {
+      "created_at": "2018-05-02T23:43:07.605Z",
+      "updated_at": "2018-05-02T23:43:07.606Z",
+      "title": "How not to start a war",
+      "author": "Morgan Freeman",
+      "isbn": "1234-5678-914",
+      "page_count": "6",
+      "is_available": true,
+      "stock": 5,
+      "category": "history"
+    }
+  }
+]
