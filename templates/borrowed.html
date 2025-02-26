@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    <h5>User Borrowed Books</h5>
+    <p><a href="{% url 'home' %}">Back to Library</a></p>
+    <div class="d-flex flex-wrap bd-highlight mb-3 border-bottom">
+        {% for loan in loan_list %}
+         <div class="p-2 bd-highlight">
+             <div class="card" style="width: 28rem;">
+              <h5 class="card-header">Title: {{ loan.book.title|truncatechars_html:30 }}</h5>
+              <div class="card-body">
+                <h6 class="card-title"><b>Author:</b> {{ loan.book.author|truncatechars_html:40 }}</h6>
+                <p class="card-text">
+                    <b>ISBN:</b> {{ loan.book.isbn}} <br>
+                    <hr>
+                    <b class="small">status:</b> {{ loan.status|title }} |
+                    <b class="small">Due Date:</b> {{ loan.expected_return_date }} |
+                    <b class="small">Fine:</b> £ {{ loan.fine }}
+                </p>
+              </div>
+            </div>
+         </div>
+        {% endfor %}
+    </div>
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+{% endblock content %}
