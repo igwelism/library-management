@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "common.apps.CommonConfig",
     "library.apps.LibraryConfig",
     "accounts.apps.AccessConfig",
+    "api.apps.ApiConfig",
 ]
 
 MIDDLEWARE = [
